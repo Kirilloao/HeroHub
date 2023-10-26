@@ -7,6 +7,13 @@
 
 import UIKit
 
+// MARK: - CharacterListProtocol
+protocol CharacterListProtocol: AnyObject {
+    func success()
+    func failure(error: NetworkError)
+}
+
+
 class CharacterListViewController: UIViewController {
 
     override func viewDidLoad() {

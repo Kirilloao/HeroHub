@@ -15,6 +15,7 @@
 		3C82C1DB2AEAE06500575FEF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1DA2AEAE06500575FEF /* NetworkManager.swift */; };
 		3C82C1DD2AEAE0A000575FEF /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1DC2AEAE0A000575FEF /* Hero.swift */; };
 		3C82C1DF2AEAE0C200575FEF /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1DE2AEAE0C200575FEF /* ImageCacheManager.swift */; };
+		3C82C1E12AEAE1D700575FEF /* CharacterListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1E02AEAE1D700575FEF /* CharacterListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		3C82C1DA2AEAE06500575FEF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3C82C1DC2AEAE0A000575FEF /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		3C82C1DE2AEAE0C200575FEF /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		3C82C1E02AEAE1D700575FEF /* CharacterListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +65,8 @@
 				3C82C1BD2AEADE2700575FEF /* AppDelegate.swift */,
 				3C82C1BF2AEADE2700575FEF /* SceneDelegate.swift */,
 				3C82C1D92AEAE05600575FEF /* ServiceLayer */,
-				3C82C1D22AEADFC200575FEF /* DetailModule */,
 				3C82C1D12AEADFB400575FEF /* CharacterListModule */,
+				3C82C1D22AEADFC200575FEF /* DetailModule */,
 				3C82C1C62AEADE2800575FEF /* Assets.xcassets */,
 				3C82C1C82AEADE2800575FEF /* LaunchScreen.storyboard */,
 				3C82C1CB2AEADE2800575FEF /* Info.plist */,
@@ -124,6 +126,7 @@
 		3C82C1D72AEADFE400575FEF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3C82C1C12AEADE2700575FEF /* CharacterListViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,7 +134,7 @@
 		3C82C1D82AEADFE800575FEF /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				3C82C1C12AEADE2700575FEF /* CharacterListViewController.swift */,
+				3C82C1E02AEAE1D700575FEF /* CharacterListPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C82C1E12AEAE1D700575FEF /* CharacterListPresenter.swift in Sources */,
 				3C82C1DD2AEAE0A000575FEF /* Hero.swift in Sources */,
 				3C82C1DB2AEAE06500575FEF /* NetworkManager.swift in Sources */,
 				3C82C1DF2AEAE0C200575FEF /* ImageCacheManager.swift in Sources */,
