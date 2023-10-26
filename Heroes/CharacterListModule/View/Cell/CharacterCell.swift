@@ -30,7 +30,7 @@ final class CharacterCell: UICollectionViewCell {
     }()
     
     private var activityIndicator: UIActivityIndicatorView?
-
+    
     // MARK: - Private Properties
     private var imageURL: URL? {
         didSet {
@@ -55,7 +55,7 @@ final class CharacterCell: UICollectionViewCell {
     func configure(with character: Hero?) {
         nameLabel.text = character?.name ?? "NO DATA"
         imageURL = URL(string: character?.images.lg ?? "")
-   
+        
     }
     
     // MARK: - Network Methods

@@ -15,7 +15,7 @@ protocol CharacterListProtocol: AnyObject {
 
 
 class CharacterListViewController: UICollectionViewController {
-
+    
     // MARK: - Presenter
     var presenter: CharacterListPresenter?
     
