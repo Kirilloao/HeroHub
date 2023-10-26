@@ -31,6 +31,5 @@ class DetailPresenter: DetailViewPresenterProtocol {
     func setHero() {
         self.view?.setHero(hero)
     }
-    
-  
+
 }
