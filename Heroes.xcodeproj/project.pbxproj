@@ -16,6 +16,8 @@
 		3C82C1DD2AEAE0A000575FEF /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1DC2AEAE0A000575FEF /* Hero.swift */; };
 		3C82C1DF2AEAE0C200575FEF /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1DE2AEAE0C200575FEF /* ImageCacheManager.swift */; };
 		3C82C1E12AEAE1D700575FEF /* CharacterListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1E02AEAE1D700575FEF /* CharacterListPresenter.swift */; };
+		3C82C1E42AEAE25F00575FEF /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1E32AEAE25F00575FEF /* CharacterCell.swift */; };
+		3C82C1E72AEAE28400575FEF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3C82C1E62AEAE28400575FEF /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,7 @@
 		3C82C1DC2AEAE0A000575FEF /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		3C82C1DE2AEAE0C200575FEF /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		3C82C1E02AEAE1D700575FEF /* CharacterListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListPresenter.swift; sourceTree = "<group>"; };
+		3C82C1E32AEAE25F00575FEF /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C82C1E72AEAE28400575FEF /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +130,7 @@
 		3C82C1D72AEADFE400575FEF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3C82C1E22AEAE24500575FEF /* Cell */,
 				3C82C1C12AEADE2700575FEF /* CharacterListViewController.swift */,
 			);
 			path = View;
@@ -148,6 +153,14 @@
 			path = ServiceLayer;
 			sourceTree = "<group>";
 		};
+		3C82C1E22AEAE24500575FEF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3C82C1E32AEAE25F00575FEF /* CharacterCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,6 +177,9 @@
 			dependencies = (
 			);
 			name = Heroes;
+			packageProductDependencies = (
+				3C82C1E62AEAE28400575FEF /* SnapKit */,
+			);
 			productName = Heroes;
 			productReference = 3C82C1BA2AEADE2700575FEF /* Heroes.app */;
 			productType = "com.apple.product-type.application";
@@ -192,6 +208,9 @@
 				Base,
 			);
 			mainGroup = 3C82C1B12AEADE2700575FEF;
+			packageReferences = (
+				3C82C1E52AEAE28400575FEF /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 3C82C1BB2AEADE2700575FEF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -221,6 +240,7 @@
 				3C82C1E12AEAE1D700575FEF /* CharacterListPresenter.swift in Sources */,
 				3C82C1DD2AEAE0A000575FEF /* Hero.swift in Sources */,
 				3C82C1DB2AEAE06500575FEF /* NetworkManager.swift in Sources */,
+				3C82C1E42AEAE25F00575FEF /* CharacterCell.swift in Sources */,
 				3C82C1DF2AEAE0C200575FEF /* ImageCacheManager.swift in Sources */,
 				3C82C1C22AEADE2700575FEF /* CharacterListViewController.swift in Sources */,
 				3C82C1BE2AEADE2700575FEF /* AppDelegate.swift in Sources */,
@@ -432,6 +452,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3C82C1E52AEAE28400575FEF /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3C82C1E62AEAE28400575FEF /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C82C1E52AEAE28400575FEF /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3C82C1B22AEADE2700575FEF /* Project object */;
 }
