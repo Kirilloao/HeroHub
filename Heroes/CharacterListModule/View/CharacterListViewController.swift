@@ -13,11 +13,11 @@ protocol CharacterListProtocol: AnyObject {
     func failure(error: NetworkError)
 }
 
-
 class CharacterListViewController: UICollectionViewController {
     
     // MARK: - Presenter
     var presenter: CharacterListPresenter?
+    private let searchController = UISearchController(searchResultsController: nil)
     
     // MARK: - Life Cycle Methods
     override func viewDidLoad() {
@@ -28,6 +28,7 @@ class CharacterListViewController: UICollectionViewController {
         setupLayout()
         presenter?.getCharacters()
         setupNavigationBar()
+        setupSearchController()
     }
     
     // MARK: - Init
@@ -41,6 +42,21 @@ class CharacterListViewController: UICollectionViewController {
     }
     
     // MARK: - Private Methods
+    private func setupSearchController() {
+//        searchController.searchResultsUpdater = self
+//        searchController.searchBar.delegate = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search"
+        searchController.searchBar.barTintColor = .white
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+        
+        if let textField = searchController.searchBar.value(forKey: "searchField") as? UITextField {
+            textField.font = UIFont.boldSystemFont(ofSize: 17)
+            textField.textColor = .white
+        }
+    }
+    
     private func setupLayout() {
         let layout = UICollectionViewFlowLayout()
         
@@ -68,7 +84,7 @@ class CharacterListViewController: UICollectionViewController {
     
     private func setupNavigationBar() {
         title = "Heroes"
-
+        
         let navBarAppearance = UINavigationBarAppearance()
         
         //устанавливаем цвет для navigationBar
@@ -113,6 +129,8 @@ class CharacterListViewController: UICollectionViewController {
 
 // MARK: - CharacterListProtocol
 extension CharacterListViewController: CharacterListProtocol {
+
+    
     func success() {
         collectionView.reloadData()
     }
@@ -121,3 +139,4 @@ extension CharacterListViewController: CharacterListProtocol {
         print(error)
     }
 }
+

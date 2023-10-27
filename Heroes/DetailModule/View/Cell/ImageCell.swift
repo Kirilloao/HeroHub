@@ -43,7 +43,6 @@ final class ImageCell: UITableViewCell {
             case .failure(let error):
                 print(error)
             }
-            
         }
     }
     
