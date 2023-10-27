@@ -22,10 +22,12 @@ class CharacterListViewController: UICollectionViewController {
     // MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .black
+        collectionView.backgroundColor = .black
         registerCell()
         setupLayout()
         presenter?.getCharacters()
+        setupNavigationBar()
     }
     
     // MARK: - Init
@@ -62,6 +64,26 @@ class CharacterListViewController: UICollectionViewController {
             CharacterCell.self,
             forCellWithReuseIdentifier: CharacterCell.reuseID
         )
+    }
+    
+    private func setupNavigationBar() {
+        title = "Heroes"
+
+        let navBarAppearance = UINavigationBarAppearance()
+        
+        //устанавливаем цвет для navigationBar
+        navBarAppearance.backgroundColor = UIColor.black
+        
+        // меняем цвет для текста
+        navBarAppearance.titleTextAttributes = [
+            .foregroundColor: UIColor.systemRed,
+            .font : UIFont.getFont(.nosifer, size: 24)  ?? UIFont.systemFont(ofSize: 24)
+        ]
+        
+        // меняем цвет в статичном положении и в скролинге
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        
     }
     
     // MARK: - UICollectionViewDataSource

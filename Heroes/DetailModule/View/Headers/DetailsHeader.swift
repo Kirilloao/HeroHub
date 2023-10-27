@@ -17,8 +17,8 @@ final class DetailsHeader: UITableViewHeaderFooterView {
         var title = UILabel()
         title.numberOfLines = 0
         title.lineBreakMode = .byWordWrapping
-        title.textColor = .black
-        title.font = UIFont.boldSystemFont(ofSize: 24)
+        title.textColor = .systemRed
+        title.font = UIFont.getFont(.metal, size: 24)
         return title
     }()
     

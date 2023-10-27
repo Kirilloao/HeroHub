@@ -18,6 +18,7 @@ final class ImageCell: UITableViewCell {
         mainImageView.backgroundColor = .yellow
         mainImageView.layer.cornerRadius = 10
         mainImageView.clipsToBounds = true
+        
         return mainImageView
     }()
 
