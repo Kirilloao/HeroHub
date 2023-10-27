@@ -1,7 +1,13 @@
 # HeroHub🦸
 
 ## Tecnical Stack:
-* UIKit, MVP, NoStoryboard, URLSession, CollectionView/TableView, NSCache, SnapKit
+* UIKit
+* MVP
+* NoStoryboard
+* URLSession
+* CollectionView/TableView,
+* NSCache
+* SnapKit
 
 ## Api:
 https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.2.0/api/all.json
