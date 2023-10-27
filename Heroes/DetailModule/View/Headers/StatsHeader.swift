@@ -18,7 +18,7 @@ final class StatsHeader: UITableViewHeaderFooterView {
         title.numberOfLines = 0
         title.lineBreakMode = .byWordWrapping
         title.textColor = .systemRed
-        title.font = UIFont.getFont(.metal, size: 24)
+        title.font = UIFont.getFont(.nosifer, size: 20)
         return title
     }()
     
@@ -45,9 +45,11 @@ final class StatsHeader: UITableViewHeaderFooterView {
     
     private func setupConstraints() {
         titleLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.bottom.equalToSuperview()
-            make.left.equalToSuperview().offset(16)
+//            make.top.equalToSuperview()
+//            make.bottom.equalToSuperview()
+//            make.left.equalToSuperview().offset(16)
+            make.centerY.equalToSuperview()
+            make.centerX.equalToSuperview()
         }
     }
     

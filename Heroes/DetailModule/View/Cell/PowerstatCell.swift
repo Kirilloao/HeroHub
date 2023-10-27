@@ -92,7 +92,7 @@ final class PowerstatCell: UITableViewCell {
     
     private func createLabel(with color: UIColor) -> UILabel{
         let customLabel = UILabel()
-        customLabel.textColor = .systemRed
+        customLabel.textColor = color
         customLabel.font = UIFont.getFont(.metal, size: 20)
         return customLabel
     }
