@@ -7,7 +7,6 @@
 
 import Foundation
 
-// MARK: - CharacterListPresenterProtcol
 protocol CharacterListPresenterProtcol: AnyObject {
     init(view: CharacterListProtocol, networkService: NetworkServiceProtocol)
     func getCharacters()
@@ -15,7 +14,6 @@ protocol CharacterListPresenterProtcol: AnyObject {
 }
 
 class CharacterListPresenter: CharacterListPresenterProtcol {
-    
     // MARK: - Private Properties
     private unowned var view: CharacterListProtocol?
     private let networkService: NetworkServiceProtocol!

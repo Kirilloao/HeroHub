@@ -27,17 +27,12 @@ final class PowerstatCell: UITableViewCell {
     }()
     
     private lazy var statLabel: UILabel = {
-        var statLabel = UILabel()
-        statLabel.textColor = .white
-        statLabel.font = UIFont.getFont(.metal, size: 20)
+        var statLabel = createLabel(with: .white)
         return statLabel
     }()
     
     private lazy var statValueLabel: UILabel = {
-        var statValueLabel = UILabel()
-        statValueLabel.textColor = .systemRed
-        statValueLabel.font = UIFont.getFont(.metal, size: 20)
-        statValueLabel.text = "59"
+        var statValueLabel = createLabel(with: .systemRed)
         return statValueLabel
     }()
     
@@ -93,5 +88,12 @@ final class PowerstatCell: UITableViewCell {
             make.centerY.equalTo(statLabel.snp.centerY)
             make.right.equalToSuperview().offset(-20)
         }
+    }
+    
+    private func createLabel(with color: UIColor) -> UILabel{
+        let customLabel = UILabel()
+        customLabel.textColor = .systemRed
+        customLabel.font = UIFont.getFont(.metal, size: 20)
+        return customLabel
     }
 }

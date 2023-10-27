@@ -49,5 +49,4 @@ final class NameHeader: UITableViewHeaderFooterView {
             make.centerX.equalToSuperview()
         }
     }
-
 }

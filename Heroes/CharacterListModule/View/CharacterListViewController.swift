@@ -7,12 +7,10 @@
 
 import UIKit
 
-// MARK: - CharacterListProtocol
 protocol CharacterListProtocol: AnyObject {
     func success()
     func failure(error: NetworkError)
 }
-
 
 class CharacterListViewController: UICollectionViewController {
     
@@ -83,7 +81,6 @@ class CharacterListViewController: UICollectionViewController {
         // меняем цвет в статичном положении и в скролинге
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
-        
     }
     
     // MARK: - UICollectionViewDataSource

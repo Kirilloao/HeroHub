@@ -17,5 +17,4 @@ extension UIFont {
     static func getFont(_ font: Font, size: CGFloat) -> UIFont? {
         UIFont(name: font.rawValue, size: size)
     }
-    
 }

@@ -24,7 +24,6 @@ final class CharacterCell: UICollectionViewCell {
     private lazy var nameLabel: UILabel = {
         var label = UILabel()
         label.textAlignment = .center
-//        label.font = UIFont.boldSystemFont(ofSize: 16)
         label.numberOfLines = 0
         label.font = UIFont.getFont(.metal, size: 18)
         label.textColor = .systemRed

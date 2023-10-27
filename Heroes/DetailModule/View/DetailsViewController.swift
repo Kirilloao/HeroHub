@@ -35,6 +35,7 @@ final class DetailsViewController: UITableViewController {
     // MARK: - Private Methods
     private func setupTableView() {
         tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.backgroundColor = .black
         
         tableView.register(
             ImageCell.self,
