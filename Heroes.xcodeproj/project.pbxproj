@@ -22,6 +22,8 @@
 		3C82C1EC2AEAE54F00575FEF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1EB2AEAE54F00575FEF /* DetailsViewController.swift */; };
 		3C82C1F02AEAE57E00575FEF /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1EF2AEAE57E00575FEF /* DetailsPresenter.swift */; };
 		3C82C1F32AEAE80B00575FEF /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1F22AEAE80B00575FEF /* ImageCell.swift */; };
+		3C82C1F62AEBC15200575FEF /* DetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1F52AEBC15200575FEF /* DetailsHeader.swift */; };
+		3C82C1F82AEBC5CE00575FEF /* PowerstatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1F72AEBC5CE00575FEF /* PowerstatCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		3C82C1EB2AEAE54F00575FEF /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		3C82C1EF2AEAE57E00575FEF /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		3C82C1F22AEAE80B00575FEF /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		3C82C1F52AEBC15200575FEF /* DetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHeader.swift; sourceTree = "<group>"; };
+		3C82C1F72AEBC5CE00575FEF /* PowerstatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerstatCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 		3C82C1D42AEADFD000575FEF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3C82C1F42AEBC11F00575FEF /* Headers */,
 				3C82C1F12AEAE7AF00575FEF /* Cell */,
 				3C82C1EB2AEAE54F00575FEF /* DetailsViewController.swift */,
 			);
@@ -185,8 +190,17 @@
 			isa = PBXGroup;
 			children = (
 				3C82C1F22AEAE80B00575FEF /* ImageCell.swift */,
+				3C82C1F72AEBC5CE00575FEF /* PowerstatCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		3C82C1F42AEBC11F00575FEF /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				3C82C1F52AEBC15200575FEF /* DetailsHeader.swift */,
+			);
+			path = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,7 +288,9 @@
 				3C82C1EA2AEAE31000575FEF /* ModuleBuilder.swift in Sources */,
 				3C82C1C22AEADE2700575FEF /* CharacterListViewController.swift in Sources */,
 				3C82C1BE2AEADE2700575FEF /* AppDelegate.swift in Sources */,
+				3C82C1F62AEBC15200575FEF /* DetailsHeader.swift in Sources */,
 				3C82C1C02AEADE2700575FEF /* SceneDelegate.swift in Sources */,
+				3C82C1F82AEBC5CE00575FEF /* PowerstatCell.swift in Sources */,
 				3C82C1EC2AEAE54F00575FEF /* DetailsViewController.swift in Sources */,
 				3C82C1F02AEAE57E00575FEF /* DetailsPresenter.swift in Sources */,
 			);
