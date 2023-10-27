@@ -26,9 +26,9 @@ final class DetailsViewController: UITableViewController {
     // MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
         setupTableView()
         setupNavigationBar()
-        view.backgroundColor = .black
         presenter.setHero()
     }
     

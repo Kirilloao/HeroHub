@@ -88,13 +88,11 @@
 		3C82C1BC2AEADE2700575FEF /* Heroes */ = {
 			isa = PBXGroup;
 			children = (
-				3C82C1BD2AEADE2700575FEF /* AppDelegate.swift */,
-				3C82C1BF2AEADE2700575FEF /* SceneDelegate.swift */,
-				3C82C1E92AEAE31000575FEF /* ModuleBuilder.swift */,
 				3C82C1FC2AEBCBB500575FEF /* Extension */,
 				3C82C1D92AEAE05600575FEF /* ServiceLayer */,
 				3C82C1D12AEADFB400575FEF /* CharacterListModule */,
 				3C82C1D22AEADFC200575FEF /* DetailModule */,
+				3C82C2052AEC055E00575FEF /* SupportingFiles */,
 				3C82C1E82AEAE2EE00575FEF /* Resources */,
 				3C82C1CB2AEADE2800575FEF /* Info.plist */,
 			);
@@ -232,6 +230,16 @@
 				3C82C1FD2AEBCBCD00575FEF /* Extension + UIFont.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		3C82C2052AEC055E00575FEF /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3C82C1BD2AEADE2700575FEF /* AppDelegate.swift */,
+				3C82C1BF2AEADE2700575FEF /* SceneDelegate.swift */,
+				3C82C1E92AEAE31000575FEF /* ModuleBuilder.swift */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
