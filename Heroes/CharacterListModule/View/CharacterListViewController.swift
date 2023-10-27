@@ -104,7 +104,11 @@ class CharacterListViewController: UICollectionViewController {
     }
     
     // MARK: - UICollectionViewDelegate
-    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let hero = presenter?.heroes?[indexPath.row]
+        let detailVC = ModelBuilder.createDetailModule(hero: hero)
+        navigationController?.pushViewController(detailVC, animated: true)
+    }
 }
 
 // MARK: - CharacterListProtocol

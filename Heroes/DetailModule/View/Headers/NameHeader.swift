@@ -1,5 +1,5 @@
 //
-//  DetailsHeader.swift
+//  NameHeader.swift
 //  Heroes
 //
 //  Created by Kirill Taraturin on 27.10.2023.
@@ -7,10 +7,10 @@
 
 import UIKit
 
-final class DetailsHeader: UITableViewHeaderFooterView {
-    
+final class NameHeader: UITableViewHeaderFooterView {
+
     // MARK: - Static Properties
-    static let reuseID = String(describing: DetailsHeader.self)
+    static let reuseID = String(describing: NameHeader.self)
     
     // MARK: - Private UI Properties
     private lazy var titleLabel: UILabel = {
@@ -18,7 +18,7 @@ final class DetailsHeader: UITableViewHeaderFooterView {
         title.numberOfLines = 0
         title.lineBreakMode = .byWordWrapping
         title.textColor = .systemRed
-        title.font = UIFont.getFont(.metal, size: 24)
+        title.font = UIFont.getFont(.nosifer, size: 24)
         return title
     }()
     
@@ -45,10 +45,9 @@ final class DetailsHeader: UITableViewHeaderFooterView {
     
     private func setupConstraints() {
         titleLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.bottom.equalToSuperview()
-            make.left.equalToSuperview().offset(16)
+            make.centerY.equalToSuperview()
+            make.centerX.equalToSuperview()
         }
     }
-    
+
 }

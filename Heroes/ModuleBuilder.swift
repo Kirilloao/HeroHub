@@ -10,6 +10,7 @@ import UIKit
 // MARK: - Builder
 protocol Builder {
     static func createCharacterListModule() -> UIViewController
+    static func createDetailModule(hero: Hero?) -> UIViewController
 }
 
 // MARK: - ModelBuilder
@@ -18,6 +19,14 @@ class ModelBuilder: Builder {
         let view = CharacterListViewController()
         let networkService = NetworkManager()
         let presenter = CharacterListPresenter(view: view, networkService: networkService)
+        view.presenter = presenter
+        return view
+    }
+    
+    static func createDetailModule(hero: Hero?) -> UIViewController {
+        let view = DetailsViewController()
+        let networkService = NetworkManager()
+        let presenter = DetailPresenter(view: view, networkService: networkService, hero: hero)
         view.presenter = presenter
         return view
     }

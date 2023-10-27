@@ -33,6 +33,20 @@ final class ImageCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Public Methods
+    func configure(with image: String) {
+        guard let url = URL(string: image) else { return }
+        NetworkManager().fetchImage(from: url) { result in
+            switch result {
+            case .success(let data):
+                self.mainImageView.image = UIImage(data: data)
+            case .failure(let error):
+                print(error)
+            }
+            
+        }
+    }
+    
     // MARK: - Private Methods
     private func setViews() {
         addSubview(mainImageView)
@@ -40,10 +54,10 @@ final class ImageCell: UITableViewCell {
     
     private func setupConstraints() {
         mainImageView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
+            make.top.equalToSuperview().offset(20)
             make.left.equalToSuperview().offset(100)
             make.right.equalToSuperview().offset(-100)
-            make.bottom.equalToSuperview()
+            make.bottom.equalToSuperview().offset(-20)
         }
     }
 }

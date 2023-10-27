@@ -28,16 +28,20 @@ struct Powerstats: Decodable {
     var durability: Int
     var power: Int
     var combat: Int
-    
-    var description: String {
-        """
-        Intelligence: \(intelligence)
-        Strength: \(strength)
-        Speed: \(speed)
-        Durability: \(durability)
-        Power: \(power)
-        Combat: \(combat)
-        """
+
+}
+
+extension Powerstats {
+    var powerStatsArray: [(String, Int)] {
+        return [
+               ("Intelligence", intelligence),
+               ("Strength", strength),
+               ("Speed", speed),
+               ("Durability", durability),
+               ("Power", power),
+               ("Combat", combat)
+           ]
+       
     }
 }
 

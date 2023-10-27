@@ -7,24 +7,35 @@
 
 import UIKit
 
+protocol DetailViewProtocol: AnyObject {
+    func setHero(_ hero: Hero?)
+}
+
 final class DetailsViewController: UITableViewController {
     
-    let testDataArray = ["int", "str", "spe", "dur", "pow", "com"]
-    let testArray = ["intelligence", "strength", "speed", "durability", "power", "combat"]
-    let testInt = ["58", "100", "84", "44","90","77"]
+    // MARK: - Public Properties
+    var presenter: DetailViewPresenterProtocol!
+    
+    // MARK: - Private Properties
+    private var hero: Hero?
+    private var powerstats: [(String, Int)] {
+        return hero?.powerstats.powerStatsArray ?? []
+    }
+    private let testDataArray = ["int", "str", "spe", "dur", "pow", "com"]
     
     // MARK: - Life Cycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerCells()
+        setupTableView()
         setupNavigationBar()
         view.backgroundColor = .black
+        presenter.setHero()
     }
     
-    
-    
     // MARK: - Private Methods
-    private func registerCells() {
+    private func setupTableView() {
+        tableView = UITableView(frame: .zero, style: .grouped)
+        
         tableView.register(
             ImageCell.self,
             forCellReuseIdentifier: ImageCell.reuseID
@@ -34,39 +45,37 @@ final class DetailsViewController: UITableViewController {
             forCellReuseIdentifier: PowerstatCell.reuseID
         )
         tableView.register(
-            DetailsHeader.self,
-            forHeaderFooterViewReuseIdentifier: DetailsHeader.reuseID
+            StatsHeader.self,
+            forHeaderFooterViewReuseIdentifier: StatsHeader.reuseID
+        )
+        tableView.register(
+            NameHeader.self,
+            forHeaderFooterViewReuseIdentifier: NameHeader.reuseID
         )
     }
     
     private func setupNavigationBar() {
+        let navBarAppearance = UINavigationBarAppearance()
         
-        title = "Current Hero"
-        navigationController?.navigationBar.prefersLargeTitles = true
-
-
-
-            let navBarAppearance = UINavigationBarAppearance()
-            
-            //устанавливаем цвет для navigationBar
-            navBarAppearance.backgroundColor = UIColor.black
-            
-            // меняем цвет для текста
-            navBarAppearance.titleTextAttributes = [
-                .foregroundColor: UIColor.systemRed,
-                .font : UIFont.getFont(.nosifer, size: 24)  ?? UIFont.systemFont(ofSize: 24)
-            ]
+        //устанавливаем цвет для navigationBar
+        navBarAppearance.backgroundColor = UIColor.black
+        
+        // меняем цвет для текста
+        navBarAppearance.titleTextAttributes = [
+            .foregroundColor: UIColor.systemRed,
+            .font : UIFont.getFont(.nosifer, size: 24)  ?? UIFont.systemFont(ofSize: 24)
+        ]
         
         navBarAppearance.largeTitleTextAttributes = [
             .foregroundColor: UIColor.systemRed,
             .font : UIFont.getFont(.nosifer, size: 24)  ?? UIFont.systemFont(ofSize: 24)
         ]
-            
-            // меняем цвет в статичном положении и в скролинге
-            navigationController?.navigationBar.standardAppearance = navBarAppearance
-            navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
-            
         
+        // меняем цвет в статичном положении и в скролинге
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+        
+        navigationController?.navigationBar.tintColor = .systemRed
     }
     
     // MARK: - UITableViewDataSource
@@ -75,76 +84,84 @@ final class DetailsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
-        } else {
-            return testDataArray.count
-        }
+        section == 0
+        ? 1
+        : hero?.powerstats.powerStatsArray.count ?? 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         switch indexPath.section {
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ImageCell.reuseID, for: indexPath) as? ImageCell else { return UITableViewCell() }
             cell.backgroundColor = .black
+            cell.selectionStyle = .none
+            cell.configure(with: hero?.images.lg ?? "")
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: PowerstatCell.reuseID, for: indexPath) as? PowerstatCell else { return UITableViewCell() }
             
             let icon = testDataArray[indexPath.row]
-            let text = testArray[indexPath.row]
-            let int = testInt[indexPath.row]
+            let one = powerstats[indexPath.row]
+            
             cell.backgroundColor = .black
-            cell.configure(with: icon, text: text, value: int)
+            cell.selectionStyle = .none
+            cell.configure(with: icon, text: one)
             return cell
         default:
             return UITableViewCell()
         }
-        
-//        if indexPath.section == 0 {
-//
-//        } else if indexPath.section == 1 {
-//
-//        }
-//
-//        return UITableViewCell()
     }
     
     // MARK: - UITableViewDelegate
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 0 {
-            return 220
-        } else {
-            return 50
-            
-        }
+        indexPath.section == 0 ? 300 : 50
+
     }
     
     // MARK: - HeaderView
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard
-            let headerView = tableView.dequeueReusableHeaderFooterView(
-                withIdentifier: DetailsHeader.reuseID)
-                as? DetailsHeader
-        else {
+        
+        switch section {
+        case 1:
+            guard
+                let headerView = tableView.dequeueReusableHeaderFooterView(
+                    withIdentifier: StatsHeader.reuseID)
+                    as? StatsHeader
+            else {
+                return UITableViewHeaderFooterView()
+            }
+            headerView.configure(with: "Powerstats")
+            return headerView
+        case 0:
+            guard
+                let headerView = tableView.dequeueReusableHeaderFooterView(
+                    withIdentifier: NameHeader.reuseID)
+                    as? NameHeader
+            else {
+                return UITableViewHeaderFooterView()
+            }
+            
+            
+            if  let name = hero?.name  {
+                headerView.configure(with: name)
+            } else {
+                headerView.configure(with: "NO DATA")
+            }
+            
+            return headerView
+        default:
             return UITableViewHeaderFooterView()
         }
-        
-        if section == 1 {
-            headerView.configure(with: "Powerstats")
-        }
-        
-        return headerView
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        switch section {
-        case 1:
-            return 30
-        default:
-            return 0
-        }
+        30
     }
-    
+}
+
+// MARK: - DetailViewProtocol
+extension DetailsViewController: DetailViewProtocol {
+    func setHero(_ hero: Hero?) {
+        self.hero = hero
+    }
 }

@@ -22,12 +22,13 @@
 		3C82C1EC2AEAE54F00575FEF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1EB2AEAE54F00575FEF /* DetailsViewController.swift */; };
 		3C82C1F02AEAE57E00575FEF /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1EF2AEAE57E00575FEF /* DetailsPresenter.swift */; };
 		3C82C1F32AEAE80B00575FEF /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1F22AEAE80B00575FEF /* ImageCell.swift */; };
-		3C82C1F62AEBC15200575FEF /* DetailsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1F52AEBC15200575FEF /* DetailsHeader.swift */; };
+		3C82C1F62AEBC15200575FEF /* StatsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1F52AEBC15200575FEF /* StatsHeader.swift */; };
 		3C82C1F82AEBC5CE00575FEF /* PowerstatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1F72AEBC5CE00575FEF /* PowerstatCell.swift */; };
 		3C82C1FB2AEBCB4700575FEF /* Nosifer-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C82C1FA2AEBCB4700575FEF /* Nosifer-Regular.ttf */; };
 		3C82C1FE2AEBCBCD00575FEF /* Extension + UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1FD2AEBCBCD00575FEF /* Extension + UIFont.swift */; };
 		3C82C2002AEBCF2000575FEF /* PermanentMarker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C82C1FF2AEBCF2000575FEF /* PermanentMarker-Regular.ttf */; };
 		3C82C2022AEBD07700575FEF /* MetalMania-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C82C2012AEBD07700575FEF /* MetalMania-Regular.ttf */; };
+		3C82C2042AEBEFD500575FEF /* NameHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C2032AEBEFD500575FEF /* NameHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,12 +48,13 @@
 		3C82C1EB2AEAE54F00575FEF /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		3C82C1EF2AEAE57E00575FEF /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		3C82C1F22AEAE80B00575FEF /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
-		3C82C1F52AEBC15200575FEF /* DetailsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHeader.swift; sourceTree = "<group>"; };
+		3C82C1F52AEBC15200575FEF /* StatsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsHeader.swift; sourceTree = "<group>"; };
 		3C82C1F72AEBC5CE00575FEF /* PowerstatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerstatCell.swift; sourceTree = "<group>"; };
 		3C82C1FA2AEBCB4700575FEF /* Nosifer-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nosifer-Regular.ttf"; sourceTree = "<group>"; };
 		3C82C1FD2AEBCBCD00575FEF /* Extension + UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIFont.swift"; sourceTree = "<group>"; };
 		3C82C1FF2AEBCF2000575FEF /* PermanentMarker-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PermanentMarker-Regular.ttf"; sourceTree = "<group>"; };
 		3C82C2012AEBD07700575FEF /* MetalMania-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MetalMania-Regular.ttf"; sourceTree = "<group>"; };
+		3C82C2032AEBEFD500575FEF /* NameHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,7 +210,8 @@
 		3C82C1F42AEBC11F00575FEF /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				3C82C1F52AEBC15200575FEF /* DetailsHeader.swift */,
+				3C82C1F52AEBC15200575FEF /* StatsHeader.swift */,
+				3C82C2032AEBEFD500575FEF /* NameHeader.swift */,
 			);
 			path = Headers;
 			sourceTree = "<group>";
@@ -315,12 +318,13 @@
 				3C82C1DB2AEAE06500575FEF /* NetworkManager.swift in Sources */,
 				3C82C1FE2AEBCBCD00575FEF /* Extension + UIFont.swift in Sources */,
 				3C82C1E42AEAE25F00575FEF /* CharacterCell.swift in Sources */,
+				3C82C2042AEBEFD500575FEF /* NameHeader.swift in Sources */,
 				3C82C1DF2AEAE0C200575FEF /* ImageCacheManager.swift in Sources */,
 				3C82C1F32AEAE80B00575FEF /* ImageCell.swift in Sources */,
 				3C82C1EA2AEAE31000575FEF /* ModuleBuilder.swift in Sources */,
 				3C82C1C22AEADE2700575FEF /* CharacterListViewController.swift in Sources */,
 				3C82C1BE2AEADE2700575FEF /* AppDelegate.swift in Sources */,
-				3C82C1F62AEBC15200575FEF /* DetailsHeader.swift in Sources */,
+				3C82C1F62AEBC15200575FEF /* StatsHeader.swift in Sources */,
 				3C82C1C02AEADE2700575FEF /* SceneDelegate.swift in Sources */,
 				3C82C1F82AEBC5CE00575FEF /* PowerstatCell.swift in Sources */,
 				3C82C1EC2AEAE54F00575FEF /* DetailsViewController.swift in Sources */,

@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         let mainVC = ModelBuilder.createCharacterListModule()
         let secondVC = DetailsViewController()
-        window?.rootViewController = UINavigationController(rootViewController: secondVC)
+        window?.rootViewController = UINavigationController(rootViewController: mainVC)
         window?.makeKeyAndVisible()
     }
 }

@@ -7,9 +7,7 @@
 
 import Foundation
 
-protocol DetailViewProtocol: AnyObject {
-    func setHero(_ hero: Hero?)
-}
+
 
 protocol DetailViewPresenterProtocol: AnyObject {
     init(view: DetailViewProtocol, networkService: NetworkServiceProtocol, hero: Hero?)
