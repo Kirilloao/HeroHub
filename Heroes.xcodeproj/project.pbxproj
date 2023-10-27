@@ -18,7 +18,7 @@
 		3C82C1E12AEAE1D700575FEF /* CharacterListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1E02AEAE1D700575FEF /* CharacterListPresenter.swift */; };
 		3C82C1E42AEAE25F00575FEF /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1E32AEAE25F00575FEF /* CharacterCell.swift */; };
 		3C82C1E72AEAE28400575FEF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3C82C1E62AEAE28400575FEF /* SnapKit */; };
-		3C82C1EA2AEAE31000575FEF /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1E92AEAE31000575FEF /* ModuleBuilder.swift */; };
+		3C82C1EA2AEAE31000575FEF /* AssemblyModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1E92AEAE31000575FEF /* AssemblyModuleBuilder.swift */; };
 		3C82C1EC2AEAE54F00575FEF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1EB2AEAE54F00575FEF /* DetailsViewController.swift */; };
 		3C82C1F02AEAE57E00575FEF /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1EF2AEAE57E00575FEF /* DetailsPresenter.swift */; };
 		3C82C1F32AEAE80B00575FEF /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C1F22AEAE80B00575FEF /* ImageCell.swift */; };
@@ -29,6 +29,7 @@
 		3C82C2002AEBCF2000575FEF /* PermanentMarker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C82C1FF2AEBCF2000575FEF /* PermanentMarker-Regular.ttf */; };
 		3C82C2022AEBD07700575FEF /* MetalMania-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C82C2012AEBD07700575FEF /* MetalMania-Regular.ttf */; };
 		3C82C2042AEBEFD500575FEF /* NameHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C2032AEBEFD500575FEF /* NameHeader.swift */; };
+		3C82C2072AEC207E00575FEF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C82C2062AEC207E00575FEF /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +45,7 @@
 		3C82C1DE2AEAE0C200575FEF /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		3C82C1E02AEAE1D700575FEF /* CharacterListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListPresenter.swift; sourceTree = "<group>"; };
 		3C82C1E32AEAE25F00575FEF /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
-		3C82C1E92AEAE31000575FEF /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		3C82C1E92AEAE31000575FEF /* AssemblyModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyModuleBuilder.swift; sourceTree = "<group>"; };
 		3C82C1EB2AEAE54F00575FEF /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		3C82C1EF2AEAE57E00575FEF /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		3C82C1F22AEAE80B00575FEF /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
@@ -55,6 +56,7 @@
 		3C82C1FF2AEBCF2000575FEF /* PermanentMarker-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PermanentMarker-Regular.ttf"; sourceTree = "<group>"; };
 		3C82C2012AEBD07700575FEF /* MetalMania-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MetalMania-Regular.ttf"; sourceTree = "<group>"; };
 		3C82C2032AEBEFD500575FEF /* NameHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameHeader.swift; sourceTree = "<group>"; };
+		3C82C2062AEC207E00575FEF /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				3C82C2052AEC055E00575FEF /* SupportingFiles */,
 				3C82C1E82AEAE2EE00575FEF /* Resources */,
 				3C82C1CB2AEADE2800575FEF /* Info.plist */,
+				3C82C2062AEC207E00575FEF /* Router.swift */,
 			);
 			path = Heroes;
 			sourceTree = "<group>";
@@ -237,7 +240,7 @@
 			children = (
 				3C82C1BD2AEADE2700575FEF /* AppDelegate.swift */,
 				3C82C1BF2AEADE2700575FEF /* SceneDelegate.swift */,
-				3C82C1E92AEAE31000575FEF /* ModuleBuilder.swift */,
+				3C82C1E92AEAE31000575FEF /* AssemblyModuleBuilder.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -329,7 +332,8 @@
 				3C82C2042AEBEFD500575FEF /* NameHeader.swift in Sources */,
 				3C82C1DF2AEAE0C200575FEF /* ImageCacheManager.swift in Sources */,
 				3C82C1F32AEAE80B00575FEF /* ImageCell.swift in Sources */,
-				3C82C1EA2AEAE31000575FEF /* ModuleBuilder.swift in Sources */,
+				3C82C1EA2AEAE31000575FEF /* AssemblyModuleBuilder.swift in Sources */,
+				3C82C2072AEC207E00575FEF /* Router.swift in Sources */,
 				3C82C1C22AEADE2700575FEF /* CharacterListViewController.swift in Sources */,
 				3C82C1BE2AEADE2700575FEF /* AppDelegate.swift in Sources */,
 				3C82C1F62AEBC15200575FEF /* StatsHeader.swift in Sources */,
